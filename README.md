@@ -1,4 +1,7 @@
-# Entrega: Laboratorio N°08 Con Refactor
+# SegundoExamenParcial_DSI
+
+Se presenta el desarrollo correspondiente al segundo examen parcial de la asignatura de Desarrollo de Software I
+
 #### 1.	Datos académicos
 ***Universidad:*** Universidad Nacional de San Antotio Abad del cusco
 
@@ -18,6 +21,8 @@ Administracion de tutorias para la carrera de ingenieria informatica y de sistem
 - Cortez Ccahuantico Paola Andrea
 - Mercado Huaycho Adelmecia
 - Noa LLascanoa Eliazar 
+- Gamarra Herrera Gabriela
+- Cruz Zamalloa Omar Rolando
 
 #### 5.	Implementado en
 
@@ -37,7 +42,10 @@ El presente proyecto de desarrollo de software I tiene como finalidad mostrar a 
 - Se investiga sobre la importación de archivos .csv a la base de datos.
 - Se realizan las funciones necesarias para satisfacer con éxito las consultas solicitadas.
 - Se investiga sobre las exportaciones de las consultas en tipo .csv.
-- Se realiza la refactorización en el código.
+- Se actualizaron los nombres de las variables
+- Se documento de mejor manera el proyecto
+- Se realizo una encuesta para evaluar la usabilidad del pryecto
+- Se realizaro un plan de pruebas unitarias del software 
 
 #### 9.	Archivos de entrada
 
