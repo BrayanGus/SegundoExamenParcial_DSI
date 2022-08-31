@@ -25,8 +25,7 @@ require 'Arreglo.php';
                                 <input type="submit"name="DistribucionBalanceada" class="btn btn-success pull-right" value="Exportar Tabla como CSV"><br><br>
                             </form> 
                             <br /><br />  
-                            <center>
-                            <button><a href="index.php?id=" class="btn btn-secondary"><b>Regresar</a></button></center>
+                            <center><form> <input type = "button" value = "Regresar" onclick = "history.back ()"> </form></center>
 
                             <table class="table" >
                                 <thead class="table-success table-striped" >

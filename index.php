@@ -2,7 +2,11 @@
 include("Conexiondb.php");
 $con=conectar();
 $database = 'bdtutoria';
-
+mysqli_query($con,"DELETE FROM matriculados2022i");
+mysqli_query($con,"DELETE FROM docente");
+mysqli_query($con,"DELETE FROM tutorados");
+mysqli_query($con,"DELETE FROM matriculadoscontutor");
+mysqli_query($con,"DELETE FROM distribucion");
  ?>
 <!DOCTYPE html>
 	<html lang="es-MX">
