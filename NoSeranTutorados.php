@@ -1,10 +1,7 @@
 <?php 
-$host = 'localhost';
-$db_user = 'root';
-$db_pass = '';
-
+include("conexion.php");
+$con=conectar();
 $database = 'bdtutoria';
-$con=mysqli_connect($host, $db_user, $db_pass,$database);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,10 +19,11 @@ $con=mysqli_connect($host, $db_user, $db_pass,$database);
                         <div class="col-md-12">
 						<h1>ALUMNOS SIN TUTORIA PARA EL SEMESTRE 2022-I</h1>
                             <hr style="border-top:1px dotted #ccc;"/>
-                            <a href="ExportarNoMatriculados.php" class="btn btn-success pull-right"><span class="glyphicon glyphicon-export"></span> Exportar Tabla como CSV</a>
+                            <form action='ExportarCSV.php' method='post' enctype="multipart/form-data">
+                                <input type="submit"name="NoMatriculados" class="btn btn-success pull-right" value="Exportar Tabla como CSV"><br><br>
+                            </form> 
                             <br /><br />  
-                            <center>
-                            <button><a href="index.php?id=" class="btn btn-secondary"><b>Regresar</a></button></center>
+                            <center><form> <input type = "button" value = "Regresar" onclick = "history.back ()"> </form></center>
                             <table class="table" >
                                 <thead class="table-success table-striped" >
                                     <tr>
