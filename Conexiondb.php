@@ -1,4 +1,5 @@
 <?php
+/* Metodo para conectar a la Base de Datos */
 function conectar(){
     $host="localhost";
     $user="root";

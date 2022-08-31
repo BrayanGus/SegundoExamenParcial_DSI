@@ -1,5 +1,5 @@
 <?php
-include("conexion.php");
+include("Conexiondb.php");
 $con=conectar();
 $database = 'bdtutoria';
 

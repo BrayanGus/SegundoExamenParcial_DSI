@@ -1,7 +1,7 @@
 <?php 
-include("conexion.php");
+// Conectar con la BD
+include("Conexiondb.php");
 $con=conectar();
-$database = 'bdtutoria';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +23,8 @@ $database = 'bdtutoria';
                                 <input type="submit"name="NoMatriculados" class="btn btn-success pull-right" value="Exportar Tabla como CSV"><br><br>
                             </form> 
                             <br /><br />  
-                            <center><form> <input type = "button" value = "Regresar" onclick = "history.back ()"> </form></center>
+                            <center>
+                            <button><a href="index.php?id=" class="btn btn-secondary"><b>Regresar</a></button></center>
                             <table class="table" >
                                 <thead class="table-success table-striped" >
                                     <tr>
@@ -37,18 +38,22 @@ $database = 'bdtutoria';
 
                                 <tbody>
                                         <?php 
-											//Alumnos que no se matricularon y no seran tutorados
-                                            $SinTutoria = mysqli_query($con,"SELECT T.Codigo, T.Nombre FROM Tutorados T left Join Matriculados2022I M 
-																		on M.Codigo=T.Codigo Where M.Codigo is NULL");
-
-											//Listar en una tabla
+											/*  Alumnos que no se matricularon y no seran tutorados
+                                                Selecciona a los alumnos Tutorados en el semestre 2022 - I
+                                                que son matriculados en el presente semestre    */
+                                            $alumnos_sin_tutoria = mysqli_query($con,"SELECT T.Codigo, T.Nombre 
+                                                                        FROM Tutorados T left Join Matriculados2022I M 
+																		on M.Codigo=T.Codigo 
+                                                                        Where M.Codigo is NULL");
+                                                                        
+											//Mostrar Alumnos sin tutoria en el semestre 2022 - I
 											$n=0;
-											while($fila1 = mysqli_fetch_array($SinTutoria)){
+											while($alumno_sin_tutor = mysqli_fetch_array($alumnos_sin_tutoria)){
 												$n++;
 												?>
 													<tr><td><?php  echo $n?></td>    
-													<td><?php  echo $fila1['Codigo']?></td>
-													<td><?php  echo $fila1['Nombre']?></td>                                     
+													<td><?php  echo $alumno_sin_tutor['Codigo']?></td>
+													<td><?php  echo $alumno_sin_tutor['Nombre']?></td>                                     
 													</tr>
 												
                                         		<?php 
